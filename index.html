@@ -6,11 +6,13 @@
     /* Internal CSS */
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
     .header {
       padding: 80px;
       text-align: center;
-      background: #123afe;
+      background: #2ecc71; /* Changed color to green (#2ecc71) */
       color: white;
     }
     .navbar {
@@ -18,8 +20,7 @@
       background-color: #333;
     }
     .navbar a {
-      float: left;
-      display: block;
+      display: inline-block;
       color: white;
       text-align: center;
       padding: 14px 16px;
@@ -41,6 +42,33 @@
       background-color: #ddd;
       color: black;
     }
+    .navbar a:last-child {
+      margin-right: auto;
+    }
+    .text {
+      color: #fff;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: relative;
+      display: inline-block;
+    }
+    /* New CSS rule for the bottom part of the page */
+    .bottom-box {
+      background-color: #f0f0f0; /* Set the background color for the bottom box */
+      padding: 20px; /* Adjust padding as needed */
+      margin-top: 20px; /* Add some space between the navbar and the bottom box */
+    }
+    .inner-box {
+      background-color: #fff; /* Set the background color for the inner box */
+      padding: 20px; /* Adjust padding as needed */
+      border-radius: 10px; /* Add border radius for rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    }
+    .contact-info {
+      margin-bottom: 20px; /* Add space between each contact info */
+    }
+
+
     /* Slideshow Styles */
     .slideshow-container {
       max-width: 1000px;
@@ -95,6 +123,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="header">
     <h1> HI Dad!!</h1>
