@@ -1,58 +1,88 @@
-<!DOCTYPE html>
+.<!DOCTYPE html>
 <html>
 
 <head>
   <style>
     
-    /* Internal CSS */
-    body {
+   /* Internal CSS */
+   body {
       font-family: Arial, sans-serif;
     }
+
     .header {
       padding: 80px;
       text-align: center;
       background: #1cbc9c;
       color: white;
     }
+
     .navbar {
       overflow: hidden;
       background-color: #333;
+      display: flex; /* Added */
+      justify-content: space-between; /* Added */
+      align-items: center; /* Added */
     }
+
     .navbar a {
-      display: inline-block;
+      float: left;
+      font-size: 16px;
       color: white;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
     }
-    .navbar a:last-child {
-      float: right;
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
     }
-    .navbar a:hover {
-      background-color: #ddd;
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
       color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
     }
-    .text {
-      color: #fff;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: relative;
-      display: inline-block;
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
     }
-    /* New CSS rule for the bottom part of the page */
-    .bottom-box {
-      background-color: #f0f0f0; /* Set the background color for the bottom box */
-      padding: 20px; /* Adjust padding as needed */
-      margin-top: 20px; /* Add some space between the navbar and the bottom box */
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
-    .inner-box {
-      background-color: #fff; /* Set the background color for the inner box */
-      padding: 20px; /* Adjust padding as needed */
-      border-radius: 10px; /* Add border radius for rounded corners */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-    }
-    .contact-info {
-      margin-bottom: 20px; /* Add space between each contact info */
+
+    /* Added CSS for Contact link alignment */
+    .right-align {
+      margin-left: auto;
     }
 
 
@@ -119,9 +149,27 @@
 
   <div class="navbar">
     <a href="https://davidcola.github.io/index.html">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="https://davidcola.github.io/Contact.html">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Student Projects 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://davidcola.github.io/PageB.html">Bink!</a>
+        <a href="https://davidcola.github.io/PageG.html">GutterBall</a>
+        <a href="https://davidcola.github.io/PageL.html">Lost In Transit</a>
+        <a href="https://davidcola.github.io/PageU.html">Untitled Square Game</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Solo Projects 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://davidcola.github.io/PageP.html">Pressure</a>
+        <a href="https://davidcola.github.io/PageT.html">Tanks The Game</a>
+      </div>
+    </div>
+    <a class="right-align" href="https://davidcola.github.io/Contact.html">Contact</a> <!-- Added class "right-align" -->
   </div>
 
   <div class="slideshow-container">
