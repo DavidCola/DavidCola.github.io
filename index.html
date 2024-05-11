@@ -3,6 +3,42 @@
 
 <body>
 
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Page Title</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .header {
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: right;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .header button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+</style>
+<div class="header">
+    <button onclick="window.location.href = 'path/to/resume.pdf';">Find Resume</button>
+    <button onclick="window.open('https://www.linkedin.com/', '_blank');">LinkedIn</button>
+    <button onclick="window.location.href = 'mailto:youremail@example.com';">Contact</button>
+</div>
 
 <!-- Your content goes here -->
 
