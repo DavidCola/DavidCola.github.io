@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Internal CSS */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      padding: 80px;
+      text-align: center;
+      background: #1cbc9c;
+      color: white;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Added CSS for Contact link alignment */
+    .right-align {
+      margin-left: auto;
+    }
+
+    /* New styles for the section */
+    .section {
+      display: flex;
+      align-items: stretch; /* Ensures all items have the same height */
+      padding: 40px;
+      background-color: #f0f0f0; /* Background color for the section */
+    }
+
+    .image-container {
+      flex: 1;
+      background-color: #c0c0c0; /* Background color for the image container */
+      padding: 20px; /* Padding for the image container */
+      margin-right: 10px; /* Adds space between image and text */
+      margin-left: 10px; /* Adds space between image and text */
+      display: flex;
+      justify-content: center; /* Center image horizontally */
+      align-items: center; /* Center image vertically */
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .text-block {
+      flex: 2;
+      background-color: #c0c0c0; /* Background color for the text block */
+      padding: 20px; /* Padding for the text block */
+      margin-right: 10px; /* Adds space between image and text */
+      margin-left: 10px; /* Adds space between image and text */
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+    }
+
+    .text-block h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .text-block p {
+      font-size: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>David Colacurcio</h1>
+    <p>a website about me</p>
+  </div>
+
+
+  <div class="navbar">
+    <a href="https://davidcola.github.io/index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Student Projects 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://davidcola.github.io/PageB.html">Bink!</a>
+        <a href="https://davidcola.github.io/PageG.html">GutterBall</a>
+        <a href="https://davidcola.github.io/PageL.html">Lost In Transit</a>
+        <a href="https://davidcola.github.io/PageU.html">Untitled Square Game</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Solo Projects 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://davidcola.github.io/PageP.html">Pressure</a>
+        <a href="https://davidcola.github.io/PageT.html">Tanks The Game</a>
+      </div>
+    </div>
+    <a class="right-align" href="https://davidcola.github.io/Contact.html">Contact</a> <!-- Added class "right-align" -->
+  </div>
+
+  <div class="section">
+    <div class="text-block">
+      <h2>GutterBall</h2>
+      <h1>My Video</h1>
+      <video controls>
+          <source src="GTT.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <div class="image-container">
+        <img src="G.png" alt="Image">
+      </div>
+      <p>This is a text block with some content.</p>
+      <p>You can replace this with your own text.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="image-container">
+      <img src="PageG.html" alt="Image">
+    </div>
+    <div class="text-block">
+      <h2>Header for Text Block</h2>
+      <p>This is a text block with some content.</p>
+      <p>You can replace this with your own text.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="text-block">
+      <h2>Header for Text Block</h2>
+      <p>This is a text block with some content.</p>
+      <p>You can replace this with your own text.</p>
+    </div>
+    <div class="image-container">
+      <img src="bbrun.png" alt="Image">
+    </div>
+  </div>
+
+</html>
