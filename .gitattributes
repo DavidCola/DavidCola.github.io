@@ -1,1 +1,1 @@
-GBT.mp4 filter=lfs diff=lfs merge=lfs -text
+*GBT.mp4 filter=lfs diff=lfs merge=lfs -text
