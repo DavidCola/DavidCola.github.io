@@ -267,6 +267,26 @@
     <div class="content">
       <div class="navbar">
         <a href="https://davidcola.github.io/index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Student Projects
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://davidcola.github.io/PageB.html">BINK!</a>
+            <a href="https://davidcola.github.io/PageG.html">GutterBall</a>
+            <a href="https://davidcola.github.io/PageL.html">Lost In Transit</a>
+            <a href="https://davidcola.github.io/PageU.html">Untitled Square Game</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Solo Projects
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://davidcola.github.io/PageP.html">Pressure</a>
+            <a href="https://davidcola.github.io/PageT.html">Tanks The Game</a>
+          </div>
+        </div>
         <a class="right-align" href="https://davidcola.github.io/Contact.html">Contact</a>
       </div>
 
