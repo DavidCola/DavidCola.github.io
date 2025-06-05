@@ -1,0 +1,224 @@
+body {
+  background-color: #001B2E;
+}
+
+.BigBoxBorder {
+  max-width: 1200px;
+  color: rgba(0, 0, 0, 0);
+  background-color: #22181C;
+  border-width: 20px;
+  border-color:#e55812;
+  border-style: ridge; /* <-- Add this line */
+  padding: 0%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+
+.FloatingBoxBorder {
+  background-color: #22181C;
+  border-width: 20px;
+  border-color: #e55812;
+  border-style: ridge;
+  padding: 0%;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0);
+}
+.ContentBox {
+  max-width: 1200px;
+  color: rgb(0, 0, 0);
+  background-color: #e08f32;
+  border-width: 12px;
+  border-color: #4d2712;
+  border-style: ridge; /* <-- Add this line */
+  padding: 1%;
+  margin: auto;
+}
+.ContentRow{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+}
+.FillCollem {
+  color: rgb(0, 0, 0);
+  background-color: #2b1323;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+}
+.EmptyContentBox {
+  max-width: 1200px;
+  color: rgb(0, 0, 0);
+  background-color: #38262d;
+  border-width: 12px;
+  border-color: #4d2712;
+  border-style: ridge; /* <-- Add this line */
+  padding: 1%;
+  margin: auto;
+}
+
+.FancyTitleText {
+  font-family: Goudy Old Style;
+  font-size: 250%;
+  text-align: center;
+  margin: 0%;
+}
+.SubTitleText {
+  font-family: RockwellB;
+  font-size: 250%;
+  text-align: center;
+  margin: 0%;
+}
+.SubSubTitleText {
+  font-family: Rockwell;
+  font-size: 100%;
+  text-align: center;
+  margin: 0%;
+}
+.ContentText {
+  font-family: David;
+  font-size: 150%;
+  text-align: center;
+  margin: 0%;
+}
+ 
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.MainCollem{
+  max-width: 1200px;
+  padding: 0%;
+  margin: 0 auto;
+}
+.Space{
+  width: 1200px;
+}
+
+.SideBySideBigBox{
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+}
+.ContentRow{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+}
+
+.SubTitleBox {
+  max-width: 1200px;
+  color: rgb(0, 0, 0);
+  background-color: #D74E09;
+  border-width: 6px;
+  border-color: #22181C;
+  border-style:solid; /* <-- Add this line */
+  padding: 0%;
+  margin: 0 auto;
+  font-size: 32px;
+}
+
+
+.ExpandableBoxWrapper {
+  overflow: hidden;
+}
+
+.ExpandableBox {
+  max-height: 110px;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+
+.ExpandableBox:hover {
+  max-height: 400px;
+}
+
+.HiddenContentBox {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.ExpandableBox:hover .HiddenContentBox {
+  opacity: 1;
+}
+.centered {
+  text-align: center;
+}
+.oval {
+  padding: 7px;
+  display: inline-block;
+  background-color: #FFE156;  /* or whatever color */
+  border: 4px solid #FFBC0A;
+  border-radius: 50%; /* this makes it an oval */
+  text-align: center;
+}
+
+.BlogPreviewTitleClickableBox{
+  display: inline-block;
+  border: 4px solid #ffee00;
+  padding: 0px;
+  text-decoration: none;
+  color: black;
+}
+.BlogPreviewTitleClickableBox.hover{
+  
+  background-color: #a37a58;  /* or whatever color */
+  border: 4px solid #FFBC0A;
+  cursor: pointer;
+}
+
+.BlogPreviewTitleText{
+  font-family: Tahoma;
+  font-size: 32px;
+  text-align: center;
+}
+.BlogPreviewDateText{
+  font-family: Tahoma;
+  font-size: 32px;
+  text-align: center;
+}
+
+
+
+
+.BlogPreviewDescriptionText{
+  font-family: Tahoma;
+  font-size: 32px;
+  text-align: center;
+}

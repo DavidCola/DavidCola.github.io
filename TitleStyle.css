@@ -1,0 +1,95 @@
+body {
+  background-color: #001B2E;
+}
+
+#TitleBox {
+  max-width: 1200px;
+  color: rgb(0, 0, 0);
+  background-color: #D74E09;
+  border-width: 6px;
+  border-color: #22181C;
+  border-style:solid; /* <-- Add this line */
+  padding: 0%;
+  margin: 0 auto;
+}
+
+#NavBarBox {
+  max-width: 1200px;
+  background-color: #22181C;
+  border-width: 6px;
+  border-color:#22181C;
+  border-style: solid; /* <-- Add this line */
+  padding: 0%;
+  margin: 0 auto;
+}
+#TitleText {
+  font-family: Rockwell Extra Bold;
+  font-size: 600%;
+  text-align: center;
+  margin: 0%;
+}
+#TitleSubText {
+  font-family: Rockwell Bold;
+  font-size: 250%;
+  text-align: center;
+  margin: 0%;
+}
+#TitleSubSubText {
+  font-family: Blippo;
+  font-size: 200%;
+  text-align: center;
+  margin: 0%;
+}
+#BarDropButton {
+  background-color: #FFC53A; /* Green */
+  border: none;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-width: 6px;
+  border-color:#D74E09;
+  border-style:solid; /* <-- Add this line */
+  transition-duration: .6s;
+  cursor: pointer;
+}
+
+#BarDrop {
+  position: relative;
+  display: inline-block;
+}
+
+#BarDrop-content {
+  transition-duration: .6s;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#BarDrop-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#BarDrop-content a:hover {background-color: #f1f1f1}
+
+#BarDrop:hover #BarDrop-content {
+  display: block;
+}
+
+#BarDrop:hover #BarDropButton {
+  background-color: #bb5221; /* Green */
+  padding: 12px 24px;
+  color: white;
+  border-radius: 15px;
+  border-color:#1e045c;
+  cursor: pointer;
+}
+ 
