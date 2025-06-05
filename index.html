@@ -1,631 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-  <style>
-    /* Internal CSS */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: url('background-image.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .content {
-      width: 80%;
-      max-width: 2000px;
-      background-color: white;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      box-sizing: border-box;
-    }
-
-    .header {
-      width: 80%;
-      max-width: 1000px;
-      padding: 40px 20px;
-      text-align: center;
-      background: #E5884E;
-      color: white;
-      margin: 20px auto;
-    }
-
-    .navbar {
-      overflow: hidden;
-      background-color: #333;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .navbar a {
-      float: left;
-      font-size: 26px;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    .dropdown {
-      float: left;
-      overflow: hidden;
-    }
-
-    .dropdown .dropbtn {
-      font-size: 26px;
-      border: none;
-      outline: none;
-      color: white;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0;
-    }
-
-    .navbar a:hover,
-    .dropdown:hover .dropbtn {
-      background-color: red;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .right-align {
-      margin-left: auto;
-    }
-
-    .slideshow-container {
-      width: 60%;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .mySlides {
-      display: none;
-      width: 100%;
-    }
-
-    .slideshow-img {
-      width: 100%;
-      height: auto;
-    }
-
-    .caption-container {
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      padding: 10px;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .text {
-      color: #fff;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: relative;
-      display: inline-block;
-    }
-
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    .prev:hover,
-    .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 0;
-      background-color: #f0f0f0;
-      width: 100%;
-    }
-
-    .content-wrapper {
-      display: flex;
-      width: 100%;
-      flex-direction: row;
-      gap: 20px;
-    }
-
-    .text-block {
-      flex: 1;
-      background-color: #c0c0c0;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .text-block h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .text-block p {
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .title-block {
-      text-align: center;
-      background-color: #e5884e;
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      width: 100%;
-      font-size: 26px;
-    }
-
-    .title-block h2 {
-      font-size: 2em;
-    }
-
-    .role-block,
-    .info-block,
-    .description-block,
-    .learning-block,
-    .link-block {
-      background-color: #f0f0f0;
-      padding: 15px;
-      margin: 10px 0;
-      width: 100%;
-      border-radius: 5px;
-    }
-
-    .role-block {
-      font-size: 36px;
-      text-align: center;
-    }
-
-    .info-block {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .info-item {
-      margin: 5px 10px;
-    }
-
-    .link-block {
-      background-color: #d0d0d0;
-      width: 70%;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="TitleStyle.css">
+  <link rel="stylesheet" href="StyleButtons.css">
+  <link rel="stylesheet" href="StyleSlideShow.html">
+  <link rel="icon" type="image/png" href="Dillan TD Decap.png">
 </head>
-
-<body>
-  <div class="container">
-    <div class="header">
-      <h1 style="font-size: 78px;">David Colacurcio</h1>
-      <p style="font-size: 40px;">Gameplay Programmer</p>
+<div class="MainCollem">
+  <div class ="BigBoxBorder">
+    <div id="TitleBox">
+      <h1 id="TitleText">David Colacurcio</h1>
+      <h2 id="TitleSubText"> Programmer & Game Developer</h2>
     </div>
-
-    <div class="content">
-      <div class="navbar">
-        <a href="https://davidcola.github.io/index.html">Home</a>
-        <a class="right-align" href="https://davidcola.github.io/Contact.html">Contact</a>
+    <div id="TitleBox">
+      <h2 id="TitleSubSubText"> The Officail Home Of My Portfolio, Blog, and other assorted nosence</h2>
+    </div>
+    <div id="NavBarBox" class="flex-container">
+      <a class="BarButton" href='tmp'>Home</a> 
+      <a class="BarButton" href='tmp'>About Me</a> 
+      <a class="BarButton" href='tmp'>Blog</a> 
+      <a class="BarButton" style="float:right" href='https://www.linkedin.com/in/david-colacurcio/'>LinkedIn</a>
+      <div id="BarDrop"class="dropdown" href='tmp'>
+        <a id="BarDropButton" class="dropbtn"href='tmp' >Projects</a>
+        <div id="BarDrop-content" class="dropdown-content" >
+        <a href="#" href='tmp'>Pre Collage Projects</a>
+        <a href="#" href='tmp'>Collage Projects</a>
       </div>
-
-      <div class="section">
-        <div class="title-block">
-          <h2>BINK!</h2>
-        </div>
-        <div class="content-wrapper">
-          <div class="slideshow-container">
-            <div class="mySlides2">
-              <img class="slideshow-img" src="pB1.PNG" alt="Image 11">
-            </div>
-            <div class="mySlides2">
-              <img class="slideshow-img" src="pB2.PNG" alt="Image 12">
-            </div>
-            <div class="mySlides2">
-              <img class="slideshow-img" src="pB3.PNG" alt="Image 13">
-            </div>
-            <a class="prev" onclick="plusSlides2(-1)" style="left: 0;">&#10094;</a>
-            <a class="next" onclick="plusSlides2(1)" style="right: 0;">&#10095;</a>
-          </div>
-          <div class="text-block">
-            <div class="role-block">
-              <div class="role-item"><strong>Role:</strong> Programmer/Producer</div>
-            </div>
-            <div class="info-block">
-              <div class="info-item"><strong>Time Frame:</strong> Aug 2023 – May 2024</div>
-              <div class="info-item"><strong>Team:</strong> Bonsai Beach</div>
-              <div class="info-item"><strong>Engine:</strong> Unity</div>
-            </div>
-            <div class="description-block">
-              <p><strong>Game Description:</strong></p>
-              <p>Bink is a 2-D arcade-style game where you play as a little fella and jump from node to node avoiding hazards, scoring points, and racing against an ever-shortening death timer.</p>
-            </div>
-            <div class="learning-block">
-              <p>During my time on this project, I learned a lot about team and task management, as well as how to polish a game to make it feel slick. This project is one of my favorites because of how smooth and polished it is. From the offset of development, one of our goals for Bink! was to make it feel like a completely polished experience despite its small size.</p>
-            </div>
-            <div class="link-block">
-              <a href="Bink_Setup.exe" download="Bink_Setup.exe">Click here to download!</a>
-            </div>
-          </div>
+    </div>
+  
+    </div>
+  </div>
+  
+  <div class ="BigBoxBorder">
+    <div class ="ContentBox">
+      <h1 class="FancyTitleText">Welcome!</h1>
+      <div class = "ContentText">
+        Hey there! Thanks for stopping by. This website is a hub for all things me—a place to showcase my video game portfolio, blog, video game recomendations, and pretty much anything else I feel like tossing on here!
+        Feel free to click around and explore! I hope you enjoy your time here.
+      </div>
+      
+      
+    </div>
+  </div>
+  <div  class ="BigBoxBorder" class="ExpandableBoxWrapper" style="width: 40%">
+    <div class="ContentBox ExpandableBox">
+      <h2 class="FancyTitleText" style="font-size: 230%;">Want To Learn About me?</h2>
+      
+      <div class="centered">
+        <div class="oval">
+          <h3 class="FancyTitleText" style="font-size: 200%;">Start Here!</h3>
         </div>
       </div>
-
-      <div class="section">
-        <div class="title-block">
-          <h2>GutterBall</h2>
-        </div>
-        <div class="content-wrapper">
-          <div class="slideshow-container">
-            <div class="mySlides3">
-              <img class="slideshow-img" src="pG3.png" alt="Image 14">
-            </div>
-            <div class="mySlides3">
-              <img class="slideshow-img" src="pG2.png" alt="Image 15">
-            </div>
-            <div class="mySlides3">
-              <img class="slideshow-img" src="pG4.png" alt="Image 16">
-            </div>
-            <a class="prev" onclick="plusSlides3(-1)" style="left: 0;">&#10094;</a>
-            <a class="next" onclick="plusSlides3(1)" style="right: 0;">&#10095;</a>
-          </div>
-          <div class="text-block">
-            <div class="role-block">
-              <div class="role-item"><strong>Role:</strong> Programmer</div>
-            </div>
-            <div class="info-block">
-              <div class="info-item"><strong>Time Frame:</strong> Aug 2022 - May 2023</div>
-              <div class="info-item"><strong>Team:</strong> Midnight Hour</div>
-              <div class="info-item"><strong>Engine:</strong> Unreal Engine</div>
-            </div>
-            <div class="description-block">
-              <p><strong>Game Description:</strong></p>
-              <p>Gutterball is a 3D third-person action game where you must fight through a twisted bowling alley fighting off evil pins that have come to life with your weapon of choice, the Bowling Ball!</p>
-            </div>
-            <div class="learning-block">
-              <p>This was my junior student project that I worked on with my team Midnight Hour. On this project, I operated as the primary technical designer and head of quality assurance for the team. I was responsible for implementing gameplay features into the Unreal Engine using C++. My responsibilities included the combat system, player controller, enemy behaviors, and combo system. I also learned a lot about how to utilize the Unreal Engine in a productive manner, collaborating with designers and updating a weekly QA checklist. I learned a lot about the engine, its structure, and how to extend and utilize its functionality for my purposes.</p>
-            </div>      <!-- 
-            <div class="link-block">
-              <a href="GutterBall.exe" download="GutterBall.exe">Click here to download!</a>
-            </div>-->
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="title-block">
-          <h2>Lost In Transit</h2>
-        </div>
-        <div class="content-wrapper">
-          <div class="slideshow-container">
-            <div class="mySlides4">
-              <img class="slideshow-img" src="pLIT5.png" alt="Image 17">
-            </div>
-            <div class="mySlides4">
-              <img class="slideshow-img" src="pLIT4.png" alt="Image 18">
-            </div>
-            <div class="mySlides4">
-              <img class="slideshow-img" src="LNT1.PNG" alt="Image 19">
-            </div>
-            <a class="prev" onclick="plusSlides4(-1)" style="left: 0;">&#10094;</a>
-            <a class="next" onclick="plusSlides4(1)" style="right: 0;">&#10095;</a>
-          </div>
-          <div class="text-block">
-            <div class="role-block">
-              <div class="role-item"><strong>Role:</strong> Programmer</div>
-            </div>
-            <div class="info-block">
-              <div class="info-item"><strong>Time Frame:</strong> Aug 2021 - Apr 2022</div>
-              <div class="info-item"><strong>Team:</strong> Midnight Hour</div>
-              <div class="info-item"><strong>Engine:</strong> Custom Engine</div>
-            </div>
-            <div class="description-block">
-              <p><strong>Game Description:</strong></p>
-              <p>Lost in Transit is a 2-D platformer game in which you play as a digital mailman trying to navigate corrupted file systems to deliver an email. You have to use abilities to dash and teleport your way through the level while avoiding hazards along the way.</p>
-            </div>
-            <div class="learning-block">
-              <p>The big thing about this game is that for the class we had to build it entirely in a C++ custom engine, so I was part of the programming team that made that happen. I was specifically responsible for a lot of subsystems that needed to load in data such as textures, animations, sounds, and input settings. On this team, we also had designs that needed to work within that custom engine, so a big part of my work was creating JSON-based config files for designers to be able to add new content using my systems. This project was especially fun and interesting for me because we got to create and design a custom engine ourselves. While working with engines like Unreal and Unity is convenient, I found the ability to be flexible and design systems very specifically to meet our goals a very rewarding experience.</p>
-            </div>
-            <div class="link-block">
-              <a href="LostInTransit_setup.exe" download="LostInTransit_setup.exe">Click here to download!</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="title-block">
-          <h2>Untitled Square Game</h2>
-        </div>
-        <div class="content-wrapper">
-          <div class="slideshow-container">
-            <div class="mySlides5">
-              <img class="slideshow-img" src="pUSG1.PNG" alt="Image 20">
-            </div>
-            <div class="mySlides5">
-              <img class="slideshow-img" src="pUSG2.png" alt="Image 21">
-            </div>
-            <div class="mySlides5">
-              <img class="slideshow-img" src="pUSG3.PNG" alt="Image 22">
-            </div>
-            <a class="prev" onclick="plusSlides5(-1)" style="left: 0;">&#10094;</a>
-            <a class="next" onclick="plusSlides5(1)" style="right: 0;">&#10095;</a>
-          </div>
-          <div class="text-block">
-            <div class="role-block">
-              <div class="role-item"><strong>Role:</strong> Programmer</div>
-            </div>
-            <div class="info-block">
-              <div class="info-item"><strong>Time Frame:</strong> Feb 2020 - Apr 2021</div>
-              <div class="info-item"><strong>Team:</strong> Hint of Death</div>
-              <div class="info-item"><strong>Engine:</strong> Custom Engine</div>
-            </div>
-            <div class="description-block">
-              <p><strong>Game Description:</strong></p>
-              <p>Untitled Square Game is a couch co-op platformer party game where you race other players up a vertical play space.</p>
-            </div>
-            <div class="learning-block">
-              <p>This game was a single semester freshman project that I worked on at DigiPen with team “Hint of Death”. On this project, I worked as one of many programmers and I was responsible for systems such as input and particles. The biggest thing I learned on this project was how NOT to create an input system, while in the end, I made it work, it admittedly was not very clean or efficient code. It was still an incredibly valuable experience because I got to take what I learned from this project and apply it to my next project “Lost In Transit” where I was able to create a much better and snazzier event-driven input system. I also learned a lot about how to design and get a couch co-op multiplayer system to work in terms of its UI.</p>
-            </div>
-            <div class="link-block">
-              <p>Click <a href="https://games.digipen.edu/games/untitled-square-game">here to download</a>!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="title-block">
-          <h2>Pressure</h2>
-        </div>
-        <div class="content-wrapper">
-          <div class="slideshow-container">
-            <div class="mySlides6">
-              <img class="slideshow-img" src="pP1.png" alt="Image 23">
-            </div>
-            <div class="mySlides6">
-              <img class="slideshow-img" src="pP3.PNG" alt="Image 24">
-            </div>
-            <div class="mySlides6">
-              <img class="slideshow-img" src="pP4.PNG" alt="Image 25">
-            </div>
-            <a class="prev" onclick="plusSlides6(-1)" style="left: 0;">&#10094;</a>
-            <a class="next" onclick="plusSlides6(1)" style="right: 0;">&#10095;</a>
-          </div>
-          <div class="text-block">
-            <div class="role-block">
-              <div class="role-item"><strong>Role:</strong> Programmer/Designer/Artist</div>
-            </div>
-            <div class="info-block">
-              <div class="info-item"><strong>Time Frame:</strong> Apr 2019 - Aug 2020</div>
-              <div class="info-item"><strong>Team:</strong> Solo Project</div>
-              <div class="info-item"><strong>Engine:</strong> Unity</div>
-            </div>
-            <div class="description-block">
-              <p><strong>Game Description:</strong></p>
-              <p>Pressure is a 2-D wave-based bullet hell where you constantly must switch between moving and shooting in a frantic battle against anomalous alien forces.</p>
-            </div>
-            <div class="learning-block">
-              <p>This project holds a special place in my heart as it was the first game I developed through to a finished product. I had a blast working on it from designing the combat, creating the pixel art, and doing the sound balancing. This game not only helped me find my passion for game development, but also helped me learn about how all the different elements of games like sounds, art, and gameplay must come together to create a fun and compelling experience. It also helped me learn important coding principles, such as component-based behaviors and was just good practice for learning C# and how to use the Unity system effectively. This is a game I still come back to just to play and that I genuinely enjoy playing. It is near the top of my bucket list to remake now that I have learned so much more about how to create and design a game.</p>
-            </div>
-            <!-- </div>
-            <div class="link-block">
-              <p>Click <a href="https://davidcola.github.io/PageP.html">here to download</a>!</p>
-            </div>-->
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="title-block">
-          <h2>Tanks The Game</h2>
-        </div>
-        <div class="content-wrapper">
-          <div class="slideshow-container">
-            <div class="mySlides7">
-              <img class="slideshow-img" src="pTTG1.PNG" alt="Image 26">
-            </div>
-            <div class="mySlides7">
-              <img class="slideshow-img" src="pTTG2.PNG" alt="Image 27">
-            </div>
-            <div class="mySlides7">
-              <img class="slideshow-img" src="pTTG3.PNG" alt="Image 28">
-            </div>
-            <a class="prev" onclick="plusSlides7(-1)" style="left: 0;">&#10094;</a>
-            <a class="next" onclick="plusSlides7(1)" style="right: 0;">&#10095;</a>
-          </div>
-          <div class="text-block">
-            <div class="role-block">
-              <div class="role-item"><strong>Role:</strong> Programmer/Designer/Artist</div>
-            </div>
-            <div class="info-block">
-              <div class="info-item"><strong>Time Frame:</strong> Apr 2018 - Aug 2019</div>
-              <div class="info-item"><strong>Team:</strong> Solo Project</div>
-              <div class="info-item"><strong>Engine:</strong> Unity</div>
-            </div>
-            <div class="description-block">
-              <p><strong>Game Description:</strong></p>
-              <p>Tanks the Game is a 3-D split-screen party game where you and up to 4 friends fight each other in tanks within various maps.</p>
-            </div>
-            <div class="learning-block">
-              <p>One of the most challenging parts of this project was to create the 4-player spit-screen. Looking back at that code with much more experienced eyes, I can see parts of it that are extremely scuffed and programmed in some of the worst possible ways. Honestly, considering I was teaching myself to code at the time, I am surprised I got it working at all. My favorite part of this game had to be designing the maps. I ended up with more than 12 maps in the game, many of which have their own gimmicks and unique stage hazards to make them distinct. This is another game I would love to come back to and remake with my current knowledge and skill level.</p>
-            </div>
-            <!-- </div>
-            <div class="link-block">
-              <p>Click <a href="https://davidcola.github.io/PageT.html">here to download</a>!</p>
-            </div>-->
-          </div>
+      <div class="HiddenContentBox">
+        <div class="ContentRow">
+          <a class="SmallButton" href="tmp" style="margin-right: 0.5%;">About Me</a>
+          <a class="SmallButton" href="tmp" style="margin-left: 0.5%;">Portfolio</a>  
         </div>
       </div>
     </div>
   </div>
+  <div class ="BigBoxBorder" class="flex-container" >
 
-  <script>
-    // JavaScript for slideshow functionality
-    let slideIndex2 = 1;
-    let slideIndex3 = 1;
-    let slideIndex4 = 1;
-    let slideIndex5 = 1;
-    let slideIndex6 = 1;
-    let slideIndex7 = 1;
+    <div class="ContentRow">
 
-    showSlides2(slideIndex2);
-    showSlides3(slideIndex3);
-    showSlides4(slideIndex4);
-    showSlides5(slideIndex5);
-    showSlides6(slideIndex6);
-    showSlides7(slideIndex7);
+      <div class="EmptyContentBox" style="width: 20%; height: 30pt;">
 
-    function plusSlides2(n) {
-      showSlides2(slideIndex2 += n);
+      </div>
+  
+      <div class ="ContentBox" style="width: 60%; height: 30pt;">
+        <h1 class="SubTitleText">SLIDESHOW TIME! </h1>
+      </div> 
+      
+      <div class="EmptyContentBox" style="width: 20%; height: 30pt;">
+        
+      </div>
+
+    </div> 
+
+    <div class="slideshow-container"style="width:80%">
+  
+      <!-- Full-width images with number and caption text -->
+      <div class="Slide fade">
+        <img src="Images/pB1.PNG" style="width:100% ">
+      </div>
+      
+      <div class="Slide fade">
+        <img src="Images/pB2.PNG" style="width:100%" href='tmp'>
+      </div>
+  
+      <div class="Slide fade">
+        <img src="Images/pB3.PNG" style="width:100%">
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+    <div class ="ContentBox SoftBorder" style= "height: 100px;"">
+      <div class = "ContentText SlideDescription" style="display: block;" >
+        THSIONE
+      </div>
+      <div class = "ContentText SlideDescription" style="display: block;" >
+        THSIONE adfasdf
+      </div>
+  
+  
+      <div class = "ContentText SlideDescription">
+        3ey there! Thanks for stopping by. This website is a hub for all things me—a place to showcase my video game portfolio, blog, video game recomendations, and pretty much anything else I feel like tossing on here!
+        Feel free to click around and explore! I hope you enjoy your time here.sadfffffff
+      </div>
+      
+    </div> 
+  </div>
+  <div class="Space" >
+    <div class="FloatingBoxBorder" style="float: left; width: 65%;">
+      <div class="SubTitleBox">
+        <h1 class="SubTitleText" >BLOG!</h1>
+      </div>
+      <div class="SubTitleBox">
+        <h4 class="SubSubTitleText" >Latest Post</h4>
+      </div>
+      <div class="ContentBox">
+        <a class="BlogPreviewTitleClickableBox" href="your-link.html" >
+          <h1 class="BlogPreviewTitleText"> Knitted Ningle : the undived Conqorer</h1>
+        </a>
+      </div>
+    </div>
+    <div class="FloatingBoxBorder" style="float: right; width: 25%;">
+    </div>
+  </div>
+</div>
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  timeOutProgress();
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  function timeOutProgress() {
+    slideIndex += 1;
+    setTimeout(timeOutProgress, 2000); // Change image every 2 seconds
+    showSlides(slideIndex);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("Slide");
+    let descs = document.getElementsByClassName("SlideDescription");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("show");
     }
 
-    function plusSlides3(n) {
-      showSlides3(slideIndex3 += n);
+    for (i = 0; i < descs.length; i++) {
+      descs[i].style.display = "none";
     }
 
-    function plusSlides4(n) {
-      showSlides4(slideIndex4 += n);
-    }
-
-    function plusSlides5(n) {
-      showSlides5(slideIndex5 += n);
-    }
-
-    function plusSlides6(n) {
-      showSlides6(slideIndex6 += n);
-    }
-
-    function plusSlides7(n) {
-      showSlides7(slideIndex7 += n);
-    }
-
-    function showSlides2(n) {
-      let i;
-      const slides = document.getElementsByClassName("mySlides2");
-      if (n > slides.length) { slideIndex2 = 1 }
-      if (n < 1) { slideIndex2 = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex2 - 1].style.display = "block";
-    }
-
-    function showSlides3(n) {
-      let i;
-      const slides = document.getElementsByClassName("mySlides3");
-      if (n > slides.length) { slideIndex3 = 1 }
-      if (n < 1) { slideIndex3 = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex3 - 1].style.display = "block";
-    }
-
-    function showSlides4(n) {
-      let i;
-      const slides = document.getElementsByClassName("mySlides4");
-      if (n > slides.length) { slideIndex4 = 1 }
-      if (n < 1) { slideIndex4 = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex4 - 1].style.display = "block";
-    }
-
-    function showSlides5(n) {
-      let i;
-      const slides = document.getElementsByClassName("mySlides5");
-      if (n > slides.length) { slideIndex5 = 1 }
-      if (n < 1) { slideIndex5 = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex5 - 1].style.display = "block";
-    }
-
-    function showSlides6(n) {
-      let i;
-      const slides = document.getElementsByClassName("mySlides6");
-      if (n > slides.length) { slideIndex6 = 1 }
-      if (n < 1) { slideIndex6 = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex6 - 1].style.display = "block";
-    }
-
-    function showSlides7(n) {
-      let i;
-      const slides = document.getElementsByClassName("mySlides7");
-      if (n > slides.length) { slideIndex7 = 1 }
-      if (n < 1) { slideIndex7 = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex7 - 1].style.display = "block";
-    }
+    slides[slideIndex - 1].classList.add("show");
+    descs[slideIndex - 1].style.display = "block";
+  }
   </script>
-</body>
-
-</html>
+  
