@@ -8,7 +8,6 @@ body {
   margin: 0 auto;
 }
 .BigBoxBorder {
-  max-width: 1200px;
   color: rgba(0, 0, 0, 0);
   background-color: #22181C;
   border-width: 20px;
@@ -17,6 +16,7 @@ body {
   padding: 0%;
   margin: 0 auto;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .ContentBox {

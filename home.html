@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="TitleStyle.css">
+  <link rel="stylesheet" href="StyleButtons.css">
+  <link rel="stylesheet" href="StyleSlideShow.css">
+  <link rel="icon" type="image/png" href="Dillan TD Decap.png">
+</head>
+<div class="MainCollem">
+  <div class ="BigBoxBorder">
+    <div id="TitleBox">
+      <h1 id="TitleText">David Colacurcio</h1>
+      <h2 id="TitleSubText"> Programmer & Game Developer</h2>
+    </div>
+    <div id="TitleBox">
+      <h2 id="TitleSubSubText"> The Officail Home Of My Portfolio, Blog, and other assorted nosence</h2>
+    </div>
+    <div id="NavBarBox" class="flex-container">
+      <a class="BarButton" href='tmp'>Home</a> 
+      <a class="BarButton" href='tmp'>About Me</a> 
+      <a class="BarButton" href='tmp'>Blog</a> 
+      <a class="BarButton" style="float:right" href='https://www.linkedin.com/in/david-colacurcio/'>LinkedIn</a>
+      <div id="BarDrop"class="dropdown" href='tmp'>
+        <a id="BarDropButton" class="dropbtn"href='tmp' >Projects</a>
+        <div id="BarDrop-content" class="dropdown-content" >
+        <a href="#" href='tmp'>Pre Collage Projects</a>
+        <a href="#" href='tmp'>Collage Projects</a>
+      </div>
+    </div>
+  
+    </div>
+  </div>
+  
+  <div class ="BigBoxBorder">
+    <div class ="ContentBox">
+      <h1 class="FancyTitleText">Welcome!</h1>
+      <div class = "ContentText">
+        Hey there! Thanks for stopping by. This website is a hub for all things me—a place to showcase my video game portfolio, blog, video game recomendations, and pretty much anything else I feel like tossing on here!
+        Feel free to click around and explore! I hope you enjoy your time here.
+      </div>
+      
+      
+    </div>
+  </div>
+  <div  class ="BigBoxBorder" class="ExpandableBoxWrapper" style="width: 40%">
+    <div class="ContentBox ExpandableBox">
+      <h2 class="FancyTitleText" style="font-size: 230%;">Want To Learn About me?</h2>
+      
+      <div class="centered">
+        <div class="oval">
+          <h3 class="FancyTitleText" style="font-size: 200%;">Start Here!</h3>
+        </div>
+      </div>
+      <div class="HiddenContentBox">
+        <div class="ContentRow">
+          <a class="SmallButton" href="tmp" style="margin-right: 0.5%;">About Me</a>
+          <a class="SmallButton" href="tmp" style="margin-left: 0.5%;">Portfolio</a>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class ="BigBoxBorder" class="flex-container" >
+
+    <div class="ContentRow">
+
+      <div class="EmptyContentBox" style="width: 20%; height: 30pt;">
+
+      </div>
+  
+      <div class ="ContentBox" style="width: 60%; height: 30pt;">
+        <h1 class="SubTitleText">SLIDESHOW TIME! </h1>
+      </div> 
+      
+      <div class="EmptyContentBox" style="width: 20%; height: 30pt;">
+        
+      </div>
+
+    </div> 
+
+    <div class="slideshow-container"style="width:80%">
+  
+      <!-- Full-width images with number and caption text -->
+      <div class="Slide fade">
+        <img src="Images/pB1.PNG" style="width:100% ">
+      </div>
+      
+      <div class="Slide fade">
+        <img src="Images/pB2.PNG" style="width:100%" href='tmp'>
+      </div>
+  
+      <div class="Slide fade">
+        <img src="Images/pB3.PNG" style="width:100%">
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+    <div class ="ContentBox SoftBorder" style= "height: 100px;"">
+      <div class = "ContentText SlideDescription" style="display: block;" >
+        THSIONE
+      </div>
+      <div class = "ContentText SlideDescription" style="display: block;" >
+        THSIONE adfasdf
+      </div>
+  
+  
+      <div class = "ContentText SlideDescription">
+        3ey there! Thanks for stopping by. This website is a hub for all things me—a place to showcase my video game portfolio, blog, video game recomendations, and pretty much anything else I feel like tossing on here!
+        Feel free to click around and explore! I hope you enjoy your time here.sadfffffff
+      </div>
+      
+    </div> 
+  </div>
+  <div class="BigBoxBorder" style="float: left; width: 65%;">
+    <div class="SubTitleBox">
+      <h1 class="SubTitleText" >BLOG!</h1>
+    </div>
+    <div class="SubTitleBox">
+      <h4 class="SubSubTitleText" >Latest Post</h4>
+    </div>
+    <div class="ContentBox">
+      <a class="BlogPreviewTitleClickableBox" href="your-link.html" >
+        <h1 class="BlogPreviewTitleText"> Knitted Ningle : the undived Conqorer</h1>
+      </a>
+    </div>
+  </div>
+  <div class="BigBoxBorder" style="float: right; width: 25%;">
+  </div>
+</div>
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  timeOutProgress();
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  function timeOutProgress() {
+    slideIndex += 1;
+    setTimeout(timeOutProgress, 2000); // Change image every 2 seconds
+    showSlides(slideIndex);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("Slide");
+    let descs = document.getElementsByClassName("SlideDescription");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("show");
+    }
+
+    for (i = 0; i < descs.length; i++) {
+      descs[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].classList.add("show");
+    descs[slideIndex - 1].style.display = "block";
+  }
+  </script>
+  
