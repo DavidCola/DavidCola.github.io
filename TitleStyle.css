@@ -3,7 +3,6 @@ body {
 }
 
 #TitleBox {
-  max-width: 1200px;
   color: rgb(0, 0, 0);
   background-color: #D74E09;
   border-width: 6px;
@@ -14,7 +13,6 @@ body {
 }
 
 #NavBarBox {
-  max-width: 1200px;
   background-color: #22181C;
   border-width: 6px;
   border-color:#22181C;
