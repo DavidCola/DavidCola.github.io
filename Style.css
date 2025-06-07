@@ -3,7 +3,7 @@ body {
 }
 
 .MainCollem{
-  max-width: 50%;
+  max-width: 1200px;
   padding: 0%;
   margin: 0 auto;
 }
@@ -14,7 +14,7 @@ body {
   border-color:#e55812;
   border-style: ridge; /* <-- Add this line */
   padding: 0%;
-  margin: 0 auto;
+  margin: 0 auto; 
   margin-bottom: 10px;
   overflow: hidden;
 }
@@ -29,12 +29,6 @@ body {
   margin: auto;
 }
 
-.ContentRow{
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  height: auto;
-}
 .EmptyContentBox {
   color: rgb(0, 0, 0);
   background-color: #38262d;
@@ -101,12 +95,6 @@ body {
 }
 
 
-.ContentRow{
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  height: auto;
-}
 
 
 .centered {
