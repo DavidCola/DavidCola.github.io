@@ -3,6 +3,7 @@ body {
 }
 
 .MainCollem{
+  width: 80%;
   max-width: 1200px;
   padding: 0%;
   margin: 0 auto;
@@ -29,6 +30,10 @@ body {
   margin: auto;
 }
 
+.ContentRow{
+  display:flex;
+  flex-direction: row;
+}
 .EmptyContentBox {
   color: rgb(0, 0, 0);
   background-color: #38262d;
