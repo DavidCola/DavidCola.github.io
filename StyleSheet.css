@@ -115,14 +115,14 @@ body {
 
 .FancyTitleText {
   font-family: Goudy Old Style;
-  font-size: 250%;
+  font-size: 40px;
   text-align: center;
   margin: 8px;
 }
 
 .SmallContentTitleText {
   font-family: Trebuchet;
-  font-size: 180%;
+  font-size: 40px;
   text-align: center;
   margin: 16px;
   margin-bottom: 5px;
@@ -130,7 +130,7 @@ body {
 
 .SubContentTitle {
   font-family: Coronetscript;
-  font-size: 100%;
+  font-size: 24px;
   text-align: center;
   margin: 2px;
   margin-bottom: 16px;
@@ -138,14 +138,14 @@ body {
 }
 .SectionTitle {
   font-family: Rockwell;
-  font-size: 250%;
+  font-size: 30px;
   text-align: center;
   margin: 2px;
 }
 
 .ContentText {
   font-family: David;
-  font-size: 150%;
+  font-size: 20px;
   text-align: center;
   margin: 10px;
 }
@@ -204,6 +204,7 @@ body {
     border-width: 12px;
     border-color: #4d2712;
     border-style: ridge; /* <-- Add this line */
+    position: relative;
   }
   
   .Slide {
