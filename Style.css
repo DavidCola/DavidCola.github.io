@@ -1,7 +1,6 @@
 body {
-  background-color: #001B2E;
+  background-color: #2B2D42;
 }
-
 .MainCollem{
   width: 80%;
   max-width: 1200px;
@@ -9,6 +8,18 @@ body {
   margin: 0 auto;
 }
 .BigBoxBorder {
+  color: rgba(0, 0, 0, 0);
+  background-color: #001B2E;
+  border-width: 20px;
+  border-color:#e55812;
+  border-style: ridge; /* <-- Add this line */
+  padding: 0%;
+  margin: 0 auto; 
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.OrangeBoxBorder {
   color: rgba(0, 0, 0, 0);
   background-color: #22181C;
   border-width: 20px;
@@ -19,8 +30,18 @@ body {
   margin-bottom: 10px;
   overflow: hidden;
 }
-
 .ContentBox {
+  color: rgb(0, 0, 0);
+  background-color: #e08f32;
+  border-width: 12px;
+  border-color: #4d2712;
+  border-style: ridge; /* <-- Add this line */
+  padding: 0%;
+  margin: 0 auto; 
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.InsideContentBox {
   color: rgb(0, 0, 0);
   background-color: #e08f32;
   border-width: 12px;
@@ -53,12 +74,6 @@ body {
   padding: 0%;
   margin: 0 auto;
   font-size: 32px;
-}
-.FancyTitleText {
-  font-family: Goudy Old Style;
-  font-size: 250%;
-  text-align: center;
-  margin: 0%;
 }
 .SubTitleText {
   font-family: RockwellB;

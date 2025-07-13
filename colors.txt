@@ -1,0 +1,15 @@
+#D74E09
+#2B2D42
+#9AADBF
+#FFBC0A
+#FFE156
+#001B2E
+#2191FB
+#22181C
+
+#D74E09 ORagne
+#001B2E flavorfull blue
+#2B2D42 Space cadet
+#001B2E Oxford BLue
+#22181C Dark BG
+#38262d lightDarkBG

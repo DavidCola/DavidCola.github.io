@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Groovy Portfolio Blog</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Monoton&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(135deg, #FFE156, #FFBC0A, #D74E09);
+      color: #2B2D42;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #22181C;
+      color: #FFE156;
+      padding: 40px 20px;
+      text-align: center;
+      font-family: 'Monoton', cursive;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #001B2E;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      border: 5px ridge #9AADBF;
+    }
+
+    .like-button {
+      background: #2191FB;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    .hidden-like-count {
+      visibility: hidden;
+    }
+
+    footer {
+      background: #001B2E;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Groovy Web Den</h1>
+  <p>Where pixels dance and code gets weird</p>
+</header>
+
+<nav>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#blog">Blog</a>
+  <a href="#about">About</a>
+</nav>
+
+<section id="portfolio" class="section">
+  <h2>Funky Portfolio</h2>
+  <div class="slideshow-container">
+    <img class="slide" src="https://placekitten.com/600/300" alt="Slide 1" />
+    <img class="slide" src="https://placebear.com/600/300" alt="Slide 2" />
+    <img class="slide" src="https://www.fillmurray.com/600/300" alt="Slide 3" />
+  </div>
+  <button class="like-button" onclick="likeSlide()">Like</button>
+  <span id="likeCount" class="hidden-like-count">0</span>
+</section>
+
+<section id="blog" class="section">
+  <h2>Recent Ramblings</h2>
+  <article>
+    <h3>The Day My CSS Grew Sentience</h3>
+    <p>One minute I was aligning divs. Next thing I know, my text-shadow is threatening to unionize.</p>
+  </article>
+  <article>
+    <h3>JavaScript and the Lost Variable of Doom</h3>
+    <p>They said 'let' was safer than 'var'... but they never warned me about the cursed semicolon.</p>
+  </article>
+</section>
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I'm a wandering web wizard, slinging tags and taming styles across the neon wilds of the net.
+    Sometimes I blog, sometimes I sleep — rarely both.
+  </p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Groovy Web Den. All rights preserved. Don’t steal my pixels.</p>
+</footer>
+
+<script>
+  let slideIndex = 0;
+  let likeCounter = 0;
+  const slides = document.getElementsByClassName("slide");
+  const likeDisplay = document.getElementById("likeCount");
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2500);
+  }
+
+  function likeSlide() {
+    likeCounter++;
+    likeDisplay.textContent = likeCounter;
+    likeDisplay.style.visibility = likeCounter > 5 ? "visible" : "hidden";
+  }
+
+  showSlides();
+</script>
+
+</body>
+</html>

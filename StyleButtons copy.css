@@ -1,0 +1,121 @@
+
+.BigButton {
+    background-color: #FFC53A;
+    border: none;
+    color: black;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-width: 6px;
+    border-color: #D74E09;
+    border-style: solid;
+    transition-duration: 0.6s;
+    border-radius: 15px;
+    margin: auto;
+  }
+  .BigButton:hover {
+    background-color: #bb5221;
+    padding: 12px 24px;
+    color: white;
+    border-color: #1e045c;
+    cursor: pointer;
+  }
+  .BigButton:active {
+    background-color: #fffb00;
+    color: black;
+    border-color: #001aff;
+  }
+  
+  .BarButton {
+    background-color: #FFC53A;
+    border: none;
+    color: black;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-width: 6px;
+    border-color: #D74E09;
+    border-style: solid;
+    transition-duration: 0.6s;
+    border-radius: 15px;
+    margin: auto;
+  }
+  .BarButton:hover {
+    background-color: #bb5221;
+    padding: 12px 24px;
+    color: white;
+    border-color: #1e045c;
+    cursor: pointer;
+  }
+  .BarButton:active {
+    background-color: #fffb00;
+    color: black;
+    border-color: #001aff;
+  }
+  
+  .SmallButton {
+    width: 100pt;
+    background-color: #FFC53A;
+    border: none;
+    color: black;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+    border-width: 4px;
+    border-color: #D74E09;
+    border-style: solid;
+    transition-duration: 0.6s;
+    border-radius: 10px;
+    margin: 2% auto;
+  }
+  .SmallButton:hover {
+    background-color: #bb5221;
+    padding: 8px 14px;
+    color: white;
+    border-color: #1e045c;
+    cursor: pointer;
+  }
+  .SmallButton:active {
+    background-color: #fffb00;
+    color: black;
+    border-color: #001aff;
+  }
+  .TitleButtonText {
+    font-family: Bahnschrift;
+    font-size: 350%;
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+  }
+  .ContentBoxButton {
+    display: block;
+    width: 96%;
+    box-sizing: border-box;
+    background-color: #FFC53A;
+    border-width: 12px;
+    border-color: #D74E09;
+    border-style: ridge;
+    padding: 1%;
+    color: black;
+    font-family: inherit;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 1% auto;
+  }
+  
+  .ContentBoxButton:hover {
+    background-color: #c7761b;
+  }
+  
+  .ContentBoxButton:active {
+    background-color: #a95e13;
+  }
+  

@@ -1,0 +1,260 @@
+
+body {
+  background-color: #001B2E;
+}
+
+.MainCollem{
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.BacklitTitle{
+  color: rgb(0, 0, 0);
+  background-color: #D74E09;
+  border-width: 6px;
+  border-color: #22181C;
+  border-style:solid; /* <-- Add this line */
+  padding: 0%;
+  margin: 0 auto;
+}
+
+.TitleText{
+  font-family: Rockwell Extra Bold;
+  font-size: 600%;
+  text-align: center;
+  margin: 0%;
+}
+.TitleSubText{
+  font-family: Rockwell Bold;
+  font-size: 250%;
+  text-align: center;
+  margin: 0%;
+  
+}
+
+#NavBarBox {
+  background-color: #22181C;
+  border-width: 6px;
+  border-color:#22181C;
+  border-style: solid; /* <-- Add this line */
+  padding: 0%;
+  margin: 0 auto;
+}
+.TitleSubSubText {
+  font-family: Blippo;
+  font-size: 180%;
+  text-align: center;
+  margin: 0%;
+}
+
+  
+.BarButton {
+  background-color: #FFC53A;
+  border: none;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-width: 6px;
+  border-color: #D74E09;
+  border-style: solid;
+  transition-duration: 0.6s;
+  border-radius: 15px;
+  margin: auto;
+}
+.BarButton:hover {
+  background-color: #bb5221;
+  padding: 12px 24px;
+  color: white;
+  border-color: #000e91;
+  cursor: pointer;
+}
+.BarButton:active {
+  background-color: #fffb00;
+  color: black;
+  border-color: #001aff;
+}
+
+/*/////////////////////////////////////////Borders//////////////////////////////////////////////////////*/
+.BigBoxBorder {
+  color: rgba(0, 0, 0, 0);
+  background-color: #001B2E;
+  border-width: 20px;
+  border-color:#e55812;
+  border-style: ridge; /* <-- Add this line */
+  padding: 0%;
+  margin: 0 ; 
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+
+.ThinBrownBorder {
+  color: rgb(0, 0, 0);
+  border-width: 12px;
+  border-color: #4d2712;
+  border-style: ridge; /* <-- Add this line */
+  box-sizing: border-box;
+}
+
+.PageSpaced{
+  padding: 0%;
+  margin: 0 ; 
+  margin-bottom: 10px;
+}
+
+.NoMargin{
+  padding: 0%;
+  margin: 0 ; 
+}
+
+/*////////////////////////////////////////////TEXTSTYKES///////////////////////////////////////////////////*/
+
+.FancyTitleText {
+  font-family: Goudy Old Style;
+  font-size: 250%;
+  text-align: center;
+  margin: 8px;
+}
+
+.SmallContentTitleText {
+  font-family: Trebuchet;
+  font-size: 180%;
+  text-align: center;
+  margin: 16px;
+  margin-bottom: 5px;
+}
+
+.SubContentTitle {
+  font-family: Coronetscript;
+  font-size: 100%;
+  text-align: center;
+  margin: 2px;
+  margin-bottom: 16px;
+  margin-top: 1px;
+}
+.SectionTitle {
+  font-family: Rockwell;
+  font-size: 250%;
+  text-align: center;
+  margin: 2px;
+}
+
+.ContentText {
+  font-family: David;
+  font-size: 150%;
+  text-align: center;
+  margin: 10px;
+}
+
+/*////////////////////////////////////////////FILLing///////////////////////////////////////////*/
+
+.BGLightO {
+  background-color: #e08f32;
+}
+
+.BGDark {
+  background-color: #22181C;
+}
+
+.BGLightDark{
+  background-color: #38262d;
+}
+
+/*//////////////////max-width: 30%; min-width: 20px; //////////////////////////IMages///////////////////////////////////////////*/
+.SideImage{
+  width: 100%;
+}
+/*////////////////////////////////////////////UH///////////////////////////////////////////////////*/
+
+.FlexH{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+.SideImageContainer{
+  flex: 0 0 30%;
+  min-width: 300px;
+}
+
+.InvisibleSection{
+  box-sizing: border-box;
+}
+
+.DeleteBorder{
+  border: none;
+}
+
+.OnlyBorderRight{
+  border-top: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
+/*/////////////////////////////////////////Slide Show Stylings//////////////////////////////////////////////////////*/
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1200px;
+    
+    margin: auto;
+    margin-bottom: 0;
+    border-width: 12px;
+    border-color: #4d2712;
+    border-style: ridge; /* <-- Add this line */
+  }
+  
+  .Slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    width: 100%;
+    vertical-align: middle;
+  }
+  
+  .Slide.fade {
+    position: relative;
+  }
+  
+  .Slide.show {
+    display: block;
+    opacity: 1;
+  }
+  /* Hide the images by default */
+  .SlideDescription {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+    /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /*/////////////////////////////////////////Blocks Of Space//////////////////////////////////////////////////////*/
+.BlockSectionTitleSides{
+
+}
