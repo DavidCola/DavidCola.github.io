@@ -131,7 +131,8 @@ body {
 }
 
 .SubContentTitle {
-  font-family: Coronetscript;
+  font-family: Rockwell;
+  
   font-size: 24px;
   text-align: center;
   margin: 2px;
@@ -140,7 +141,7 @@ body {
 }
 .SectionTitle {
   font-family: Rockwell;
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
   margin: 2px;
 }
@@ -148,6 +149,18 @@ body {
 .ContentText {
   font-family: David;
   font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+.BlogText {
+  font-family: David;
+  font-size: 23px;
+  text-align: center;
+  margin: 10px;
+}
+.BlogHeader {
+  font-family: David;
+  font-size: 28px;
   text-align: center;
   margin: 10px;
 }
@@ -170,6 +183,16 @@ body {
 .SideImage{
   height: 280px;
   vertical-align: middle;
+}
+
+.BlogImage{
+  height: 150px;
+  vertical-align: middle;
+}
+.BlogImageContainer{
+  margin: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /*////////////////////////////////////////////UH///////////////////////////////////////////////////*/
 
