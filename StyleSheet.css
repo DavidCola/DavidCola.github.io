@@ -89,6 +89,7 @@ body {
   margin: 0 ; 
   margin-bottom: 10px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 
@@ -98,6 +99,7 @@ body {
   border-color: #4d2712;
   border-style: ridge; /* <-- Add this line */
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .PageSpaced{
@@ -166,18 +168,18 @@ body {
 
 /*//////////////////max-width: 30%; min-width: 20px; //////////////////////////IMages///////////////////////////////////////////*/
 .SideImage{
-  width: 100%;
+  height: 280px;
+  vertical-align: middle;
 }
 /*////////////////////////////////////////////UH///////////////////////////////////////////////////*/
 
 .FlexH{
   display: flex;
   flex-flow: row;
-  flex-wrap: wrap;
 }
 .SideImageContainer{
   flex: 0 0 30%;
-  min-width: 300px;
+  overflow: hidden;
 }
 
 .InvisibleSection{
@@ -259,3 +261,5 @@ body {
 .BlockSectionTitleSides{
 
 }
+
+/*///////////////////////// Responsive Design Overrides ////////////////////////*/
