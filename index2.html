@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="stylesheet" href="StyleSheet.css">
+  <link rel="icon" type="image/png" href="Dillan TD Decap.png">
+</head>
+
+<div class="MainCollemCollored">
+
+  
+  <div class="BigBoxBorder BGDark">
+
+    <div class="BacklitTitle">
+      <h1 class="TitleText">David Colacurcio</h1>
+      <h2 class="TitleSubText"> Programmer & Game Developer</h2>
+    </div>
+
+    <div class="BacklitTitle">
+      <h2 class="TitleSubSubText"> The Officail Home Of My Portfolio, Blog, and other assorted nosence</h2>
+    </div>
+
+    <div id="NavBarBox" class="flex-container">
+      <a class="BarButton" href='tmp'>Home</a> 
+      <a class="BarButton" href='tmp'>About Me</a> 
+      <a class="BarButton" href='tmp'>Blog</a> 
+      <a class="BarButton" style="float:right" href='https://www.linkedin.com/in/david-colacurcio/'>LinkedIn</a>
+      
+    </div>
+  </div>
+
+  asdfassssssssssssssssssssssssssssssssssssssssssssdf dasf dsfa
+ 
+</div>
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  timeOutProgress();
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  function timeOutProgress() {
+    slideIndex += 1;
+    setTimeout(timeOutProgress, 2000); // Change image every 2 seconds
+    showSlides(slideIndex);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("Slide");
+    let descs = document.getElementsByClassName("SlideText");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("show");
+    }
+
+    for (i = 0; i < descs.length; i++) {
+      descs[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].classList.add("show");
+    descs[slideIndex - 1].style.display = "block";
+  }
+  </script>

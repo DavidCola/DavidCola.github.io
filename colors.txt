@@ -13,3 +13,23 @@
 #001B2E Oxford BLue
 #22181C Dark BG
 #38262d lightDarkBG
+
+
+Testables
+
+#FF7F11 Orange Wheel
+#7D8491 Slate Gray
+#C0C5C1 Silver
+#8C4843 Calid
+#598392 Air Force Blue 
+#C75000 Tawny Orange
+#441151 Russion Violet
+#2C1A1D Licorice 
+#F2D492 Peach
+#482C3D EggPlant
+#321325 Dark Purple
+#5F0F40 Typerin purple
+#587792 Silver
+
+
+#F2D492 Peach
