@@ -59,7 +59,7 @@ body {
 
   
 .BarButton {
-  background-color: #FFC53A;
+  background-color: #F2D492;
   border: none;
   color: black;
   padding: 10px 22px;
@@ -111,6 +111,14 @@ body {
 }
 
 
+.BorderSub {
+  color: rgb(0, 0, 0);
+  border-width: 8px;
+  border-color: #b46016;
+  border-style:solid; /* <-- Add this line */
+  box-sizing: border-box;
+  overflow: hidden;
+}
 .ThinBorderBigO {
   color: rgb(0, 0, 0);
   border-width: 12px;
