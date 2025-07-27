@@ -1,8 +1,7 @@
 
 body {
-  /* background-color: #001B2E;*/
-  background-color: #22181c;
-  /*background-color: #462935;*/
+ /* background-color: #001B2E;*/
+  background-color: #462935;
 }
 
 .MainCollem{
@@ -10,12 +9,12 @@ body {
   max-width: 1200px;
   margin: auto;
 }
-
 .MainCollemCollored{
   width: 80%;
   max-width: 1200px;
   margin: auto;
   background-color: #38262d;
+
   height: 7000px;
 }
 
@@ -27,26 +26,10 @@ body {
   border-style:solid; /* <-- Add this line */
   padding: 0%;
   margin: 0 auto;
-}
-
-.BacklitTitleGrad{
-  color: rgb(0, 0, 0);
-  background-color: #D74E09;
-  border-width: 6px;
-  border-color: #22181C;
-  border-style:solid; /* <-- Add this line */
-  padding: 0%;
-  margin: 0 auto;
   background-image: linear-gradient(185deg, rgba(0, 0, 0, 0.2), rgba(222, 222, 222, 0.11), rgba(0, 0, 0, 0.1));
 }
-.TitleText{
-  font-family: Rockwell Extra Bold;
-  font-size: 600%;
-  text-align: center;
-  margin: 0%;
-}
 
-.TitleTextShadow{
+.TitleText{
   font-family: Rockwell Extra Bold;
   font-size: 600%;
   text-align: center;
@@ -59,7 +42,6 @@ body {
   font-size: 250%;
   text-align: center;
   margin: 0%;
-  text-shadow: 2px 3px 4px #2222225c;
   
 }
 
@@ -77,31 +59,9 @@ body {
   font-size: 180%;
   text-align: center;
   margin: 0%;
-  text-shadow: 2px 3px 4px #2222225c;
 }
 
   
-/*/////////////////////////////////////////Buttons//////////////////////////////////////////////////////*/
-
-.LinkButton {
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: D74E09;
-  color: white;
-  text-decoration: none;
-  border: 3px solid #001B2E; /* Same as background */
-  border-radius: 12px;
-  font-family: sans-serif;
-  font-size: 16px;
-  transition: background-color 0.2s ease;
-}
-.LinkButton:hover {
-  background-color: #ff9900; /* Darker orange */
-}
-.LinkButton:active {
-  background-color: #cc7000; /* Even darker when clicked */
-}
-
 .BarButton {
   background-color: #F2D492;
   border: none;
@@ -120,18 +80,15 @@ body {
 }
 .BarButton:hover {
   background-color: #bb5221;
-  padding: 10px 29px;
-  font-size: 20px;
+  padding: 12px 24px;
   color: white;
-  border-color: #dad3ae;
+  border-color: #000e91;
   cursor: pointer;
 }
 .BarButton:active {
-  padding: 9px 29px;
-  font-size: 20px;
-  background-color: #ec723a;
+  background-color: #fffb00;
   color: black;
-  border-color: #d3da7c;
+  border-color: #001aff;
 }
 
 /*/////////////////////////////////////////Borders//////////////////////////////////////////////////////*/
@@ -182,7 +139,6 @@ body {
   box-sizing: border-box;
   overflow: hidden;
 }
-/*////////////////////////////////////////////Margins And Padding///////////////////////////////////////////////////*/
 
 .PageSpaced{
   padding: 0%;
@@ -194,62 +150,6 @@ body {
   padding: 0%;
   margin: 0 ; 
 }
-.BlogTitlePading{
-  padding: 8px;
-}
-
-.ContentBoxPadding{
-  padding: 10px;
-  padding-right: 30px;
-  padding-left: 30px;
-}
-
-/*////////////////////////////////////////////Border MOds///////////////////////////////////////////////////*/
-
-.BM-OnlyTop {
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-}
-.BM-OnlyRight {
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-}
-.BM-OnlyBottom {
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-left-width: 0px;
-}
-.BM-OnlyLeft {
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-}
-.BM-OnlyTopBottom {
-  border-right-width: 0px;
-  border-left-width: 0px;
-}
-.BM-OnlySides {
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-}
-.BM-OnlyTopRight {
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-}
-.BM-OnlyRightBottom {
-  border-top-width: 0px;
-  border-left-width: 0px;
-}
-.BM-OnlyBottomLeft {
-  border-top-width: 0px;
-  border-right-width: 0px;
-}
-.BM-OnlyLeftTop {
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-}
 
 /*////////////////////////////////////////////TEXTSTYKES///////////////////////////////////////////////////*/
 
@@ -258,16 +158,8 @@ body {
   font-size: 40px;
   text-align: center;
   margin: 8px;
-  text-shadow: 2px 3px 4px #2222225c;
 }
 
-.ContentText {
-  font-family: David;
-  font-size: 20px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
 .SmallContentTitleText {
   font-family: Trebuchet;
   font-size: 40px;
@@ -278,6 +170,7 @@ body {
 
 .SubContentTitle {
   font-family: Rockwell;
+  
   font-size: 24px;
   text-align: center;
   margin: 2px;
@@ -289,39 +182,19 @@ body {
   font-size: 50px;
   text-align: center;
   margin: 2px;
-  text-shadow: 2px 3px 4px #2222225c;
 }
 
-.BlogTitle {
-  font-family: Rockwell;
-  font-size: 70px;
+.ContentText {
+  font-family: David;
+  font-size: 20px;
   text-align: center;
-  margin: 2px;
-  text-shadow: 2px 3px 4px #2222225c;
-}
-
-.BlogSubTitleSmall {
-  font-family: Rockwell;
-  font-size: 35px;
-  text-align: center;
-  margin: 2px;
-  text-shadow: 2px 3px 4px #2222225c;
-}
-.BlogSubTitleBig {
-  font-family: Rockwell;
-  font-size: 40px;
-  text-align: center;
-  margin: 2px;
-  text-shadow: 2px 3px 4px #2222225c;
+  margin: 10px;
 }
 .BlogText {
   font-family: David;
   font-size: 23px;
   text-align: center;
   margin: 10px;
-  margin-bottom: 20px;
-  margin-right: 30px;
-  margin-left: 30px;
 }
 .BlogHeader {
   font-family: David;
@@ -346,15 +219,7 @@ body {
   background-color: #D74E09;
 }
 .BGBagie {
-  background-color: #F2D492;
-  background-image:
-    linear-gradient(to top, rgba(0, 0, 0, 0.15), transparent 5%),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.15), transparent 5%),
-    linear-gradient(to left, rgba(0, 0, 0, 0.15), transparent 2%),
-    linear-gradient(to right, rgba(0, 0, 0, 0.15), transparent 2%);
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-color: #F7DDC1;
 }
 .BGTEST2 {
   background-color: #e08f32;
@@ -488,4 +353,3 @@ body {
 
 }
 
-/*///////////////////////// Responsive Design Overrides ////////////////////////*/
